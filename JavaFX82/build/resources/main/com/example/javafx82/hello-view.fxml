@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="596.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx82.HelloController">
+   <children>
+      <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="197.0" prefWidth="602.0" style="-fx-background-color: #f0bd71; -fx-border-color: #f7d39c; -fx-border-width: 10;">
+         <children>
+            <Label fx:id="LabelName" alignment="CENTER" layoutX="214.0" layoutY="52.0" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #fff; -fx-background-radius: 4;" text="Кличка" textFill="#941e1e">
+               <font>
+                  <Font name="Franklin Gothic Book" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabelAge" alignment="CENTER" layoutX="212.0" layoutY="100.0" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #fff; -fx-background-radius: 4;" text="Возраст" textFill="#941e1e">
+               <font>
+                  <Font name="Franklin Gothic Book" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="reloadPets" layoutX="387.0" layoutY="15.0" mnemonicParsing="false" onAction="#reloadList" style="-fx-background-color: #fff;" text="Обновить">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9684210419654846" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.11981566820276497">
+                           <color>
+                              <Color red="0.9684210419654846" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.24731182795698947">
+                           <color>
+                              <Color red="0.9599999785423279" green="0.6331034302711487" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.41610539997636786">
+                           <color>
+                              <Color red="0.9024999737739563" green="0.949999988079071" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5627437079049982">
+                           <color>
+                              <Color red="0.12827585637569427" green="0.9599999785423279" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7581531371853952">
+                           <color>
+                              <Color green="0.062069121748209" blue="0.9599999785423279" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.8617511520737328">
+                           <color>
+                              <Color red="0.9315789341926575" green="1.0517902582354716E-16" blue="0.9473684430122375" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9315789341926575" green="1.0517902582354716E-16" blue="0.9473684430122375" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="AddPet" layoutX="489.0" layoutY="15.0" mnemonicParsing="false" onAction="#addNewPet" style="-fx-background-color: #fff;" text="Добавить">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9684210419654846" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.11981566820276497">
+                           <color>
+                              <Color red="0.9684210419654846" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.24731182795698947">
+                           <color>
+                              <Color red="0.9599999785423279" green="0.6331034302711487" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.41610539997636786">
+                           <color>
+                              <Color red="0.9024999737739563" green="0.949999988079071" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5627437079049982">
+                           <color>
+                              <Color red="0.12827585637569427" green="0.9599999785423279" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7581531371853952">
+                           <color>
+                              <Color green="0.062069121748209" blue="0.9599999785423279" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.8617511520737328">
+                           <color>
+                              <Color red="0.9315789341926575" green="1.0517902582354716E-16" blue="0.9473684430122375" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9315789341926575" green="1.0517902582354716E-16" blue="0.9473684430122375" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label fx:id="myPetsLabel" alignment="CENTER" layoutX="-3.0" layoutY="53.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-background-radius: 6; -fx-border-radius: 6;" text="Мои питомцы">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07851851731538773" green="0.557894766330719" blue="0.3501650393009186" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.23626373626373623">
+                     <color>
+                        <Color red="0.25200778245925903" green="0.6736842393875122" blue="0.4839298129081726" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.41483516483516475">
+                     <color>
+                        <Color red="0.3801169693470001" green="0.821052610874176" blue="0.6226315498352051" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.532967032967033">
+                     <color>
+                        <Color red="0.8947368264198303" green="0.8715399503707886" blue="0.8715399503707886" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.6428571428571428">
+                     <color>
+                        <Color red="0.26787394285202026" green="0.24916179478168488" blue="0.8105263113975525" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.760989010989011">
+                     <color>
+                        <Color red="0.16995970904827118" green="0.15150097012519836" blue="0.7052631378173828" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9969278033794164">
+                     <color>
+                        <Color red="0.09306822717189789" green="0.06362573057413101" blue="0.5052631497383118" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.09306822717189789" green="0.06362573057413101" blue="0.5052631497383118" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <HBox layoutX="240.0" layoutY="210.0" />
+      <Label alignment="CENTER" layoutX="240.0" layoutY="195.0" prefHeight="30.0" prefWidth="294.0" style="-fx-background-color: #fff;" text="Календарь прививок" textFill="#941e1e">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelDateOfVaccine" alignment="CENTER" layoutX="240.0" layoutY="223.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #fff;" text="Дата" textFill="#941e1e">
+         <font>
+            <Font name="Franklin Gothic Medium" size="12.0" />
+         </font></Label>
+      <Label fx:id="LabelTypeofVaccine" alignment="CENTER" layoutX="338.0" layoutY="223.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #fff;" text="Тип" textFill="#941e1e">
+         <font>
+            <Font name="Franklin Gothic Medium" size="12.0" />
+         </font></Label>
+      <Label fx:id="LabelNameOfVaccine" alignment="CENTER" layoutX="436.0" layoutY="223.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #fff;" text="Название" textFill="#941e1e">
+         <font>
+            <Font name="Franklin Gothic Medium" size="12.0" />
+         </font></Label>
+      <TextField fx:id="dateOne" layoutX="238.0" layoutY="249.0" prefHeight="26.0" prefWidth="104.0" promptText="гг.мм.дд" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="dateTwo" layoutX="238.0" layoutY="275.0" prefHeight="26.0" prefWidth="104.0" promptText="гг.мм.дд" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="dateThree" layoutX="238.0" layoutY="300.0" prefHeight="26.0" prefWidth="104.0" promptText="гг.мм.дд" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="dateFour" layoutX="238.0" layoutY="327.0" prefHeight="26.0" prefWidth="104.0" promptText="гг.мм.дд" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="typeOne" layoutX="342.0" layoutY="249.0" prefHeight="26.0" prefWidth="94.0" promptText="тип" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-image-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="typeTwo" layoutX="342.0" layoutY="275.0" prefHeight="26.0" prefWidth="94.0" promptText="тип" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="typeThree" layoutX="342.0" layoutY="301.0" prefHeight="26.0" prefWidth="94.0" promptText="тип" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="typeFour" layoutX="342.0" layoutY="327.0" prefHeight="26.0" prefWidth="94.0" promptText="тип" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="nameOne" layoutX="437.0" layoutY="249.0" prefHeight="26.0" prefWidth="94.0" promptText="название" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-image-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="nameTwo" layoutX="437.0" layoutY="275.0" prefHeight="26.0" prefWidth="94.0" promptText="название" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="nameThree" layoutX="437.0" layoutY="301.0" prefHeight="26.0" prefWidth="94.0" promptText="название" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="nameFour" layoutX="437.0" layoutY="327.0" prefHeight="26.0" prefWidth="94.0" promptText="название" style="-fx-background-radius: 4; -fx-background-color: #fff; -fx-border-color: #E0E0DF; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font></TextField>
+      <Button layoutX="222.0" layoutY="356.0" mnemonicParsing="false" onAction="#removePet" prefHeight="26.0" prefWidth="157.0" style="-fx-background-color: #fff; -fx-background-radius: 5;" text="Удалить питомца">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8736842274665833" green="0.08413255214691162" blue="0.6105003356933594" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.21812596006144394">
+                     <color>
+                        <Color red="0.8736842274665833" green="0.08413255214691162" blue="0.6105003356933594" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.49161053999763704">
+                     <color>
+                        <Color red="0.9263157844543457" green="0.9263157844543457" blue="0.1269395649433136" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.745007680491552">
+                     <color>
+                        <Color red="0.22144249081611633" green="0.6765952110290527" blue="0.8421052694320679" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.22144249081611633" green="0.6765952110290527" blue="0.8421052694320679" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Elephant" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="LabelBirthday" alignment="CENTER" layoutX="204.0" layoutY="146.0" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #fff; -fx-background-radius: 4;" text="Дата Рождения" textFill="#941e1e">
+         <font>
+            <Font name="Franklin Gothic Book" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextField" alignment="CENTER" layoutX="325.0" layoutY="52.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-radius: 4; -fx-background-color: #b88c4b;" />
+      <TextField fx:id="ageTextField" alignment="CENTER" layoutX="325.0" layoutY="100.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-radius: 4; -fx-background-color: #b88c4b;" />
+      <TextField fx:id="birthdayTextField" alignment="CENTER" layoutX="325.0" layoutY="148.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-radius: 4; -fx-background-color: #b88c4b;" />
+      <ListView fx:id="ListOfPets" layoutX="-3.0" layoutY="83.0" onMouseClicked="#clicked" prefHeight="287.0" prefWidth="200.0" />
+      <ImageView fx:id="AvaImage" fitHeight="128.0" fitWidth="150.0" layoutX="438.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="405.0" layoutY="356.0" mnemonicParsing="false" onAction="#confirmEdit" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #fff; -fx-background-radius: 5;" text="Сохранить изменения">
+         <font>
+            <Font name="Elephant" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9263157844543457" green="0.721382737159729" blue="0.5420662760734558" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007680491551459294">
+                     <color>
+                        <Color red="0.9263157844543457" green="0.721382737159729" blue="0.5420662760734558" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.1690298948363467">
+                     <color>
+                        <Color red="0.8315789699554443" green="0.6883625984191895" blue="0.5451462268829346" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.46410847217298834">
+                     <color>
+                        <Color red="0.8736842274665833" green="0.28152045607566833" blue="0.28152045607566833" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7180373390050812">
+                     <color>
+                        <Color red="0.6631578803062439" green="0.14491228759288788" blue="0.14491228759288788" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9692780337941631">
+                     <color>
+                        <Color red="0.4526315927505493" green="0.08549707382917404" blue="0.08549707382917404" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4526315927505493" green="0.08549707382917404" blue="0.08549707382917404" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>

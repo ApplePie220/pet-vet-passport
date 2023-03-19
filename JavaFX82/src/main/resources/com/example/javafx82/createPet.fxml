@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx82.createPetController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="90.0" prefWidth="600.0" style="-fx-background-color: #f0bd71; -fx-border-color: #f7d39c; -fx-border-width: 10;">
+         <children>
+            <Label alignment="CENTER" layoutX="123.0" layoutY="33.0" prefHeight="21.0" prefWidth="353.0" text="Добавление нового питомца">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="23.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7699999809265137" green="0.12319999933242798" blue="0.7003017067909241" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.060818713158369064" green="0.4244639277458191" blue="0.6842105388641357" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="petName" alignment="CENTER" layoutX="203.0" layoutY="95.0" prefHeight="35.0" prefWidth="194.0" promptText="Введите кличку" style="-fx-background-color: #fff; -fx-background-radius: 5;">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="petAge" alignment="CENTER" layoutX="203.0" layoutY="205.0" prefHeight="35.0" prefWidth="194.0" promptText="Введите возраст" style="-fx-background-color: #fff; -fx-background-radius: 5;">
+         <font>
+            <Font name="Bookman Old Style" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="petBirthday" alignment="CENTER" layoutX="203.0" layoutY="148.0" prefHeight="37.0" prefWidth="194.0" promptText="Введите дату рождения" style="-fx-background-color: #fff; -fx-background-radius: 5;">
+         <font>
+            <Font name="Bookman Old Style" size="14.0" />
+         </font></TextField>
+      <Label alignment="CENTER" layoutX="199.0" layoutY="251.0" prefHeight="49.0" prefWidth="202.0" text="Вид животного">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="19.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.17542241513729095" green="0.12919999659061432" blue="0.7599999904632568" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9969278033794162">
+                     <color>
+                        <Color red="0.6800000071525574" green="0.06120000034570694" blue="0.5172982811927795" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6800000071525574" green="0.06120000034570694" blue="0.5172982811927795" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <RadioButton layoutX="184.0" layoutY="301.0" mnemonicParsing="false" text="Собака">
+         <toggleGroup>
+            <ToggleGroup fx:id="selection" />
+         </toggleGroup>
+         <font>
+            <Font name="Bookman Old Style" size="17.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="328.0" layoutY="301.0" mnemonicParsing="false" text="Кошка" toggleGroup="$selection">
+         <font>
+            <Font name="Bookman Old Style" size="17.0" />
+         </font></RadioButton>
+      <Button fx:id="addingNewPet" layoutX="245.0" layoutY="335.0" mnemonicParsing="false" onAction="#addNewPet" prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #fff; -fx-background-radius: 10; -fx-border-color: #E0E0DF; -fx-border-width: 5; -fx-border-radius: 10;" text="Добавить">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7300000190734863" green="0.4558136761188507" blue="0.131400004029274" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9969278033794162">
+                     <color>
+                        <Color red="0.6200000047683716" green="0.16740000247955322" blue="0.2903043031692505" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6200000047683716" green="0.16740000247955322" blue="0.2903043031692505" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>
